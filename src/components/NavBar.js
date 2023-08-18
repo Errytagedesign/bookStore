@@ -6,23 +6,18 @@ function NavBar() {
     {
       id: 1,
       path: '/',
-      title: 'Home  |',
+      title: 'Books',
     },
     {
       id: 2,
-      path: '/calculator',
-      title: 'Calculator |',
-    },
-    {
-      id: 3,
-      path: '/quote',
-      title: 'Qoute',
+      path: '/categories',
+      title: 'Categories',
     },
   ];
 
   return (
     <nav>
-      <h2>Math Magicians</h2>
+      <h2>Book Store CMS</h2>
       <ul className="navbar">
         {NavLinks.map(({ id, path, title }) => (
           <li key={id}>
