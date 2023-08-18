@@ -1,29 +1,15 @@
 import React from 'react';
+import AddBooks from './AddBooks';
+import Book from './Book';
 
-function Home() {
-  return (
-    <div className="home">
-      <h2 className="home-title">Welcome To Our Page!</h2>
-      <p className="paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, aliquam
-        cumque in, vel, quod dolore autem temporibus obcaecati aliquid delectus
-        quidem quis voluptates voluptas nisi. Optio corrupti illum sapiente
-        voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Natus, aliquam cumque in, vel, quod dolore autem temporibus obcaecati
-        aliquid delectus quidem quis voluptates voluptas nisi. Optio corrupti
-        illum sapiente voluptate.
-        <br />
-        <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, aliquam
-        cumque in, vel, quod dolore autem temporibus obcaecati aliquid delectus
-        quidem quis voluptates voluptas nisi. Optio corrupti illum sapiente
-        voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Natus, aliquam cumque in, vel, quod dolore autem temporibus obcaecati
-        aliquid delectus quidem quis voluptates voluptas nisi. Optio corrupti
-        illum sapiente voluptate.
-      </p>
-    </div>
-  );
-}
+const Books = () => (
+  <main className="d-flex flex-column container mt-5">
+    <section className="d-flex flex-row col-12 col-md-8 justify-content-between align-items-center mx-auto mb-5">
+      <Book title="Book title" author="Book author" />
+      <button type="button">Remove</button>
+    </section>
+    <AddBooks />
+  </main>
+);
 
-export default Home;
+export default Books;
