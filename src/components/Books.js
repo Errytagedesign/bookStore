@@ -1,11 +1,16 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import AddBooks from './AddBooks';
 import Book from './Book';
-import { selectBooks } from '../Redux/Features/booksSlice';
+import { getBooks, selectBooks } from '../Redux/Features/booksSlice';
 
 function Books() {
   const allBooks = useSelector(selectBooks);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
 
   return (
     <main className="d-flex flex-column container mt-5">
