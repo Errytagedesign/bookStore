@@ -2,6 +2,22 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f5f6fa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+small,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 ul li {
   list-style: none;
   padding: 0;
@@ -16,9 +32,10 @@ a {
 .App {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 1em auto;
+  background-color: #fafafa;
+  padding-bottom: 3em;
 }
 
 button {
@@ -26,114 +43,189 @@ button {
   cursor: pointer;
 }
 
-.calculator {
+/* ===Navbar start=== */
+
+.nav-bar {
+  padding: 1em 2em;
+  background-color: white;
+  border-bottom: solid 1px #e8e8e8;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 40px;
 }
 
-.operators {
-  display: flex;
-  width: 25%;
-  flex-direction: column;
-}
-
-.digits {
-  display: flex;
-  flex-wrap: wrap;
-  width: 75%;
-  justify-content: space-between;
-}
-
-.btns {
-  flex: 1 1 33.3%;
-  padding: 2em;
-  background: #e0e0e0;
-  border: solid 1px #d1d1d1;
-}
-
-.screen {
-  width: 100%;
-  background: #858693;
-  color: #fff;
-  padding: 2em;
+.nav-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
   font-weight: bold;
-  text-align: end;
+  color: #0290ff;
 }
 
-.screen span {
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  list-style-type: none;
+  gap: 40px;
+}
+
+.nav-link {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+  letter-spacing: 1.9px;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.active-link {
+  opacity: 1;
+  color: #121212;
+}
+
+.icon-button {
+  cursor: pointer;
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+}
+
+.primary-color {
+  color: #0290ff;
+}
+
+/* ====Navbar end=== */
+
+/* ===Buttons start=== */
+
+.btns button {
+  background-color: transparent;
+  border: none;
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-weight: 300;
+  padding: 0;
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+/* ===Buttons end=== */
+
+.addBook {
+  font-family: 'Montserrat', sans-serif;
+  border-top: 2px solid #e8e8e8;
+  padding: 3em 2em;
+}
+
+.addBook h2 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #888;
+  margin-bottom: 1em;
+}
+
+.Btns {
+  background: #0290ff !important;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.bookWrapper {
+  width: 95%;
+}
+
+.book {
+  font-family: 'Roboto Slab', serif;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 2rem;
+}
+
+.book h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.book h4 {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.categories {
+  padding: 2em 3em;
+}
+
+.btns .vertical-divider {
+  width: 0.125rem;
+  height: 1.5rem;
+  background-color: #e8e8e8;
+  margin: 0 1rem;
+}
+
+/* ===Progress start=== */
+.circular-progress-container {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-progress {
+  position: absolute;
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.progress-stat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.progress-stat h4 {
+  color: #121212;
   font-size: 2rem;
+  font-weight: 400;
 }
 
-.operatorBtns {
-  padding: 2em;
-  border: solid 1px #d1d1d1;
-  width: 100%;
-  background: #f39148;
+.progress-stat p {
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
-.quote {
-  border: solid 1px #d1d1d1;
-  padding: 1em 1.3em;
-  border-radius: 20px;
-  width: 90%;
-  margin: 2em auto;
+.progress-divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 3.688rem 0 4.938rem;
+  background-color: #e8e8e8;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: wheat;
-  padding: 1em 0.4em;
+.current-chapter-container button {
+  margin-top: 1em;
+  font-size: 0.7rem;
+  padding: 0.7em 2em;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 80%;
+.current-chapter-container p {
+  font-size: 0.7rem;
+  color: #888;
 }
 
-.home {
-  text-align: start;
-  width: 80%;
+.current-chapter-container small {
+  font-size: 1rem;
 }
 
-.math_wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 2em auto;
-}
-
-.maths {
-  width: 100%;
-  margin: 2em auto;
-}
-
-@media screen and (min-width: 500px) {
-  nav {
-    padding: 1em 4em;
-  }
-
-  .navbar {
-    width: 20%;
-  }
-
-  .home {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .maths {
-    width: 40%;
-  }
-
-  .quote {
-    width: 80%;
-  }
-
-  .categories h2 {
-    width: 100%;
-  }
-}
+/* ===Progress end=== */

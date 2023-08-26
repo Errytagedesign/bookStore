@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-  <h3><b>Math Magician Projects</b></h3>
+  <h3><b>Book Store Projects</b></h3>
 
 # 📗 Table of Contents
 
@@ -22,9 +22,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 A Math Magician Projects create with React <a name="about-project"></a>
+# 📖 A Book Store project create with React <a name="about-project"></a>
 
-A Math Magician Projects developed with React, gitflow, and githubflow. In addition, i added Linters for Css and Javascript.
+A Book Store project developed with React, gitflow, and githubflow. In addition, i added Linters for Css and Javascript.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,7 +70,7 @@ Run this Command:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Errytagedesign/mathMagician
+  git clone https://github.com/Errytagedesign/bookStore
 ```
 
 ### Install
@@ -79,7 +79,7 @@ First you need to install the node package files
 Run this command:
 
 ```sh
-  cd mathMagician
+  cd bookStore
   npm install
 ```
 
@@ -130,10 +130,8 @@ I have added the linters or tests in order to avoid anykind of typos and ensure 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Create components dir
-- [ ] Create file into the components dir
-- [ ] Create math Magician projects
-- [ ] Hit The API
+- [ ] Add comments functionality
+- [ ] Update category page
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
