@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { nanoid } from 'nanoid';
 import { addBook } from '../Redux/Features/booksSlice';
 
 function AddBook() {
-  const [count, setCount] = useState(3);
   const [bookData, setBookData] = useState({
-    item_id: `item${count}`,
+    item_id: nanoid(),
     title: '',
     author: '',
+    category: 'All Books',
   });
 
   const dispatch = useDispatch();
@@ -16,27 +17,22 @@ function AddBook() {
     setBookData({ ...bookData, [e.target.name]: e.target.value });
   };
 
-  const clearInput = (data) => ({
-    ...data,
-
-    title: '',
-
-    author: '',
-  });
+  const clearInput = () => {
+    setBookData({
+      item_id: nanoid(),
+      title: '',
+      author: '',
+      category: 'All Books',
+    });
+  };
 
   const handleAddBook = (e) => {
     e.preventDefault();
-    setCount((prev) => prev + 1);
 
-    const updateId = `item${count + 1}`;
-    const updateBookData = { ...bookData, item_id: updateId };
-    setBookData(updateBookData); // Update the state with the new bookData
-    dispatch(addBook(updateBookData));
-
-    // Clear input fields
-    const clearedBookData = clearInput(updateBookData);
-    setBookData(clearedBookData);
+    dispatch(addBook(bookData));
+    clearInput();
   };
+
   return (
     <div className="form">
       <h2>Add New Book</h2>
