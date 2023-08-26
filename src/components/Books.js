@@ -1,18 +1,41 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Spinner } from 'react-bootstrap';
 import AddBooks from './AddBooks';
 import Book from './Book';
-import { selectBooks } from '../Redux/Features/booksSlice';
+import {
+  getBooks,
+  removeBook,
+  selectBooks,
+} from '../Redux/Features/booksSlice';
 
 function Books() {
-  const allBooks = useSelector(selectBooks);
+  const { books, isLoading } = useSelector(selectBooks);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
+  const handleDeleteBook = (book) => {
+    dispatch(removeBook(book));
+  };
+
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <main className="d-flex flex-column container mt-5">
       <section className="d-flex flex-column col-12 col-md-8 mx-auto mb-5">
-        {allBooks.map((book) => (
+        {books.map((book) => (
           <div key={book.item_id}>
-            <Book id={book.item_id} title={book.title} author={book.author} />
+            <Book
+              handleDeleteBook={() => handleDeleteBook(book)}
+              id={book.item_id}
+              title={book.title}
+              author={book.author}
+            />
           </div>
         ))}
       </section>
