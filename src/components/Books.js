@@ -27,7 +27,7 @@ function Books() {
 
   return (
     <main className="d-flex flex-column container mt-5">
-      <section className="d-flex flex-column col-12 col-md-8 mx-auto mb-5">
+      <section className="d-flex flex-column bookWrapper mx-auto mb-5">
         {books.map((book) => (
           <div key={book.item_id}>
             <Book
