@@ -10,7 +10,7 @@ function NavBar() {
       <ul className="nav-links">
         <li>
           <NavLink
-            className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}
+            className={({ isActive }) => (isActive ? 'active-link nav-link' : 'nav-link')}
             to="/"
           >
             BOOKS
@@ -18,7 +18,7 @@ function NavBar() {
         </li>
         <li>
           <NavLink
-            className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}
+            className={({ isActive }) => (isActive ? 'active-link nav-link' : 'nav-link')}
             to="/categories"
           >
             CATEGORIES
