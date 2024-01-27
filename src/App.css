@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f6fa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+small,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 1em auto;
+  background-color: #fafafa;
+  padding-bottom: 3em;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* ===Navbar start=== */
+
+.nav-bar {
+  padding: 1em 2em;
+  background-color: white;
+  border-bottom: solid 1px #e8e8e8;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  list-style-type: none;
+  gap: 40px;
+}
+
+.nav-link {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+  letter-spacing: 1.9px;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.active-link {
+  opacity: 1;
+  color: #121212;
+}
+
+.icon-button {
+  cursor: pointer;
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+}
+
+.primary-color {
+  color: #0290ff;
+}
+
+/* ====Navbar end=== */
+
+/* ===Buttons start=== */
+
+.btns button {
+  background-color: transparent;
+  border: none;
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-weight: 300;
+  padding: 0;
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+/* ===Buttons end=== */
+
+.addBook {
+  font-family: 'Montserrat', sans-serif;
+  border-top: 2px solid #e8e8e8;
+  padding: 3em 2em;
+}
+
+.addBook h2 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #888;
+  margin-bottom: 1em;
+}
+
+.Btns {
+  background: #0290ff !important;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.bookWrapper {
+  width: 95%;
+}
+
+.book {
+  font-family: 'Roboto Slab', serif;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 2rem;
+}
+
+.book h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.book h4 {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.categories {
+  padding: 2em 3em;
+}
+
+.btns .vertical-divider {
+  width: 0.125rem;
+  height: 1.5rem;
+  background-color: #e8e8e8;
+  margin: 0 1rem;
+}
+
+/* ===Progress start=== */
+.circular-progress-container {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-progress {
+  position: absolute;
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.progress-stat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.progress-stat h4 {
+  color: #121212;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.progress-stat p {
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.progress-divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 3.688rem 0 4.938rem;
+  background-color: #e8e8e8;
+}
+
+.current-chapter-container button {
+  margin-top: 1em;
+  font-size: 0.7rem;
+  padding: 0.7em 2em;
+}
+
+.current-chapter-container p {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.current-chapter-container small {
+  font-size: 1rem;
+}
+
+/* ===Progress end=== */
